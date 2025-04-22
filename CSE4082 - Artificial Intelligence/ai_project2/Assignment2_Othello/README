@@ -1,0 +1,103 @@
+Othello Game with AI
+This project implements the classic Othello (Reversi) board game with different modes of
+play, including Human vs. Human, Human vs. AI, and AI vs. AI. The AI utilizes a minimax
+algorithm with alpha-beta pruning and offers three heuristic evaluation strategies for
+determining the best moves.
+
+-------------------------------
+Features
+1. Game Modes:
+○ Human vs. Human
+○ Human vs. AI
+○ AI vs. AI
+-------------------------------
+
+2. AI Player:
+○ Minimax algorithm with alpha-beta pruning for decision-making.
+○ Configurable ply depth and heuristic strategies.
+-------------------------------
+
+3. Heuristic Strategies:
+○ Heuristic 1 (H1): Difference in player scores.
+○ Heuristic 2 (H2): Weighted board positions.
+○ Heuristic 3 (H3): Penalizes positions adjacent to corners for risk
+assessment.
+-------------------------------
+
+4. Dynamic Gameplay:
+○ AI adapts to various board configurations and opponents strategies.
+File Structure
+● AIPlayer.java: Implements the AI player logic, including minimax with
+alpha-beta pruning and heuristic evaluations.
+● Board.java: Manages the game board, validates moves, calculates scores, and
+handles disc flipping.
+● Game.java: Provides the main entry point and game modes.
+● AITest.java: Automated testing to evaluate AI configurations and performance
+metrics.
+-------------------------------
+
+How to Run
+1. Prerequisites:
+○ Java Development Kit (JDK) installed (version 8 or higher).
+○ A Java IDE (e.g., IntelliJ IDEA, Eclipse) or terminal setup for running Java
+programs.
+2. Compilation:
+javac -d . Board.java Game.java AIPlayer.java AITest.java
+3. Run the Game:
+java local.Assignment2_Othello.Game
+Follow the prompts to choose your game mode and play.
+4. Run AI Tests:
+java local.Assignment2_Othello.AITest
+Observe the results of AI matches with different configurations.
+-------------------------------
+
+Gameplay Instructions
+Human vs. Human
+● Each player takes turns entering their move in the format <column><row> (e.g.,
+d3).
+● The game ends when neither player has a valid move.
+Human vs. AI
+● The human player (X) inputs their move, while the AI (O) computes the optimal
+move.
+AI vs. AI
+● Two AI players compete with configurable ply depth and heuristics.
+-------------------------------
+
+AI Player
+Minimax Algorithm
+● The AI uses the minimax algorithm with alpha-beta pruning to efficiently
+determine the best move.
+● Depth (ply) controls the number of future moves evaluated.
+Heuristic Functions
+1. H1 (Score Difference): Maximizes the players score relative to the opponent.
+2. H2 (Weighted Positions): Prioritizes moves based on a pre-defined weight matrix
+for board positions.
+3. H3 (Corner Risk): Reduces risk by avoiding positions adjacent to corners.
+-------------------------------
+
+Example Results
+● Run AITest.java to see match results between different AI configurations.
+● Results include scores, move times, and AI performance comparisons.
+-------------------------------
+
+Code Overview
+Board.java
+● Initializes the game board and manages move validation.
+● Handles move placement and flips discs based on game rules.
+● Provides utility functions for score calculation and valid move detection.
+AIPlayer.java
+● Implements the AI logic.
+● Uses minimax with alpha-beta pruning for decision-making.
+● Supports heuristic evaluations for move selection.
+Game.java
+● Provides the main menu and game flow.
+● Supports different game modes.
+AITest.java
+● Automates AI vs. AI matches to evaluate performance.
+● Configurable ply depth and heuristic settings.
+-------------------------------
+
+Future Enhancements
+● Add a graphical user interface (GUI) for improved user experience.
+● Implement advanced heuristics for more competitive AI.
+● Allow dynamic configuration of AI parameters during gameplay.
